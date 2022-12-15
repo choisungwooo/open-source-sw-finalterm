@@ -34,16 +34,28 @@ You need a machine learning packages and plotting library.
   pip install matplotlib
   ~~~
 
-## Classification Model
+## Classification Model & Tuning
 
-1. ABC
+Using Voting Classifiers
+   ~~~shell
+   asdf
+   ~~~
+
+1. Logistic Regression
 
    ~~~shell
    $ cd src/mcts_rollout
    $ python tic_tac_toe.py
    ~~~
 
-2. 
+2. K Nearest Neighbors
+
+   ~~~shell
+   $ cd src/mcts_no_rollout
+   $ python tic_tac_toe.py
+   ~~~
+   
+3. Extra Tree
 
    ~~~shell
    $ cd src/mcts_no_rollout
