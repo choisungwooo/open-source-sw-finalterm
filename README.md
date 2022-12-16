@@ -36,39 +36,33 @@ You need a machine learning packages and plotting library.
 
 ## Classification Model & Tuning
 
-Using Voting Classifiers
+Voting Classifiers
+
+: machine learning model that trains on an ensemble of numerous models and predicts an output based on their highest probability of chosen class as the output.
+
+In this project, I'll use Voting Classifiers by combining the three classifiers.
    ~~~shell
-   asdf
+   estimators = [('svc',svc), ('knn', knn), ('etc', etc)]
+   voc = VotingClassifier(estimators, voting='soft',n_jobs=-1)
    ~~~
 
-1. Logistic Regression
+1. Support Vector Machine
 
    ~~~shell
-   $ cd src/mcts_rollout
-   $ python tic_tac_toe.py
+   svc = SVC(C=10, gamma=0.01, probability=True)
    ~~~
 
 2. K Nearest Neighbors
 
    ~~~shell
-   $ cd src/mcts_no_rollout
-   $ python tic_tac_toe.py
+   knn = KNeighborsClassifier(n_neighbors=1, p=4)
    ~~~
    
 3. Extra Tree
 
    ~~~shell
-   $ cd src/mcts_no_rollout
-   $ python tic_tac_toe.py
+   etc = ExtraTreesClassifier(random_state=100)
    ~~~
-
-## Example
-
-| You can show Monte Carlo Tree graph. |
-| ------------------------------------ |
-|                                      |
-|                                      |
-|                                      |
 
 
 
